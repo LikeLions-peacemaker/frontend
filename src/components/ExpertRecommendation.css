@@ -1,0 +1,57 @@
+.expert-section {
+  background-color: #f3f3f3;
+  padding: 16px;
+}
+
+.expert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expert-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.expert-list {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.expert-list::-webkit-scrollbar {
+  display: none;
+}
+
+.expert-card {
+  flex: 0 0 160px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.expert-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.expert-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.expert-price {
+  font-size: 13px;
+  color: #666;
+}
+
+.expert-rating {
+  font-size: 12px;
+}

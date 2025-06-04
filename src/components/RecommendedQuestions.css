@@ -1,0 +1,33 @@
+.recommended-section {
+  padding: 16px;
+}
+
+.question-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding: 8px 0;
+  scrollbar-width: none;
+}
+
+.question-list::-webkit-scrollbar {
+  display: none;
+}
+
+.question-item {
+  white-space: nowrap;
+  padding: 8px 16px;
+  border: 1px solid #2653e6;
+  color: #2653e6;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+}
+
+.question-input {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
