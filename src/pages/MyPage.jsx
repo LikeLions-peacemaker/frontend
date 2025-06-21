@@ -5,9 +5,7 @@ function MyPage() {
         <div>
             this is My Page.
             <BottomNav />
-        </div>
-      
-        
+        </div>    
     );
 }
 

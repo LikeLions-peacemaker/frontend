@@ -27,12 +27,14 @@
 }
 
 .expert-card {
-  flex: 0 0 160px;
+  flex: 0 0 40vw;   /* 40% of viewport width */
+  max-width: 200px; /* 최대값 제한 */
+  min-width: 120px; /* 최소값 제한 */
   background-color: #fff;
   border-radius: 12px;
   padding: 12px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  text-align: center;
+  text-align: left;
 }
 
 .expert-image {

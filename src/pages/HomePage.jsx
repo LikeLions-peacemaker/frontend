@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from '../components/Header.jsx';
 import RecommendedQuestions from '../components/RecommendedQuestions.jsx';
 import RecentConsultation from '../components/RecentConsultation';
@@ -9,7 +8,7 @@ function HomePage() {
   return (
     <div className="container">
       <Header />
-      <main className="content">
+      <main className="content" style={{ paddingBottom: '56px' }}>
         <RecommendedQuestions />
         <RecentConsultation />
         <ExpertRecommendation />

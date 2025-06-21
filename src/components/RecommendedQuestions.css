@@ -1,5 +1,9 @@
 .recommended-section {
-  padding: 16px;
+  padding: 12px;
+}
+
+.section-title {
+  color:#999999;
 }
 
 .question-list {
@@ -25,7 +29,7 @@
 }
 
 .question-input {
-  width: 100%;
+  width: 90%;
   margin-top: 12px;
   padding: 12px;
   border-radius: 12px;

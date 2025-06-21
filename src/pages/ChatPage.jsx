@@ -1,6 +1,12 @@
+import Header from '../components/Header.jsx';
+import Chat from '../components/Chat.jsx';
+
 function ChatPage() {
     return(
-        <div>this is Chat Page.</div>
+        <div>
+            <Header />
+            <Chat />
+        </div>
     );
 }
 

@@ -10,8 +10,8 @@ function RecommendedQuestions() {
 
   return (
     <section className="recommended-section">
-      <h2 className="section-title">추천질문</h2>
-      <div className="question-list">
+      <h2 className="section-title body-s">추천질문</h2>
+      <div className="question-list caption1">
         {questions.map((q, index) => (
           <button key={index} className="question-item">{q}</button>
         ))}
