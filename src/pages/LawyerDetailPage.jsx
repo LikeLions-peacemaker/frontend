@@ -1,8 +1,15 @@
 import React from 'react';
 import './LawyerDetailPage.css';
 import sampleProfile from '../assets/profile.png'; // 변호사 이미지
+import { useNavigate } from 'react-router-dom';
 
 function LawyerDetailPage() {
+  const navigate = useNavigate(); // 페이지 이동을 위한 훅 사용
+
+  const handleReservationClick = () => {
+    navigate('/lawyer/reservation'); // 예약 페이지로 이동
+  };
+
   return (
     <div className="lawyer-detail-page">
       <div className="lawyer-header">
@@ -12,7 +19,9 @@ function LawyerDetailPage() {
       </div>
 
       <div className="lawyer-summary">
-        <div className="lawyer-quote">당신의 입장에서 생각하고,<br />전문가의 시선으로 해결합니다.</div>
+        <div className="lawyer-quote">
+          당신의 입장에서 생각하고,<br />전문가의 시선으로 해결합니다.
+        </div>
         <div className="lawyer-background">
           <p><strong>학력</strong> : 서울대학교 법학전문대학원 졸업</p>
         </div>
@@ -30,26 +39,31 @@ function LawyerDetailPage() {
 
       <div className="consult-btns">
         <button className="btn-inquiry">문의하기</button>
-        <button className="btn-consult">상담 예약하기</button>
+        <button className="btn-consult" onClick={handleReservationClick}>
+          상담 예약하기
+        </button>
       </div>
 
       <div className="lawyer-cards-section">
         <div className="case-card">
-          {/* <div className="case-icon">✒️</div> */}
           <div className="case-title">상속재산분할 소송</div>
-          <div className="case-desc">자필 유언장 무효 주장 공공 형식조건<br/>미비+증인 진술 확보로 지분 50%</div>
+          <div className="case-desc">
+            자필 유언장 무효 주장 공공 형식조건<br />미비+증인 진술 확보로 지분 50%
+          </div>
           <div className="case-verified">법적 상속분 인정</div>
         </div>
         <div className="case-card">
-          {/* <div className="case-icon">✒️</div> */}
           <div className="case-title">상속재산분할 소송</div>
-          <div className="case-desc">자필 유언장 무효 주장 공공 형식조건<br/>미비+증인 진술 확보로 지분 50%</div>
+          <div className="case-desc">
+            자필 유언장 무효 주장 공공 형식조건<br />미비+증인 진술 확보로 지분 50%
+          </div>
           <div className="case-verified">법적 상속분 인정</div>
         </div>
         <div className="case-card">
-          {/* <div className="case-icon">✒️</div> */}
           <div className="case-title">상속재산분할 소송</div>
-          <div className="case-desc">자필 유언장 무효 주장 공공 형식조건<br/>미비+증인 진술 확보로 지분 50%</div>
+          <div className="case-desc">
+            자필 유언장 무효 주장 공공 형식조건<br />미비+증인 진술 확보로 지분 50%
+          </div>
           <div className="case-verified">법적 상속분 인정</div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import SearchPage from './pages/SearchPage';
 import MyPage from './pages/MyPage';
 import LawyerDetailPage from './pages/LawyerDetailPage'; // ✅ 추가
 import './fonts/Font.css';
+import LawyerReservationPage from './pages/LawyerReservationPage';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/lawyer" element={<LawyerDetailPage />} /> {/* ✅ 이 줄 추가 */}
+          <Route path="/lawyer/reservation" element={<LawyerReservationPage />} />
+          
         </Routes>
       </div>
     </Router>
