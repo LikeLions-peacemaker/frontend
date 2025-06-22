@@ -1,7 +1,8 @@
 // src/pages/SearchPage.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import BottomNav from '../components/BottomNav';
 import './SearchPage.css';
+import sampleProfile from '../assets/profile.png';
 
 const categoryTabs = ['성범죄', '재산범죄', '교통사고/범죄', '형사절차', '폭행/협박', '명예훼손/모욕'];
 
@@ -86,6 +87,14 @@ const categories = [
 ];
 
 function SearchPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const showAIResults = searchTerm.trim() === '노동법';
+
   return (
     <div className="search-page">
       <header className="search-header">
@@ -93,40 +102,85 @@ function SearchPage() {
           type="text"
           placeholder="법률 분야나 키워드를 검색해 보세요."
           className="search-input"
+          value={searchTerm}
+          onChange={handleChange}
         />
       </header>
 
-      <section className="recent-section">
-        <p className="recent-title bold-text">최근 검색어</p>
-        <p className="recent-empty">최근 검색어 내역이 없습니다.</p>
-      </section>
+      {!showAIResults && (
+        <>
+          <section className="recent-section">
+            <p className="recent-title bold-text">최근 검색어</p>
+            <p className="recent-empty">최근 검색어 내역이 없습니다.</p>
+          </section>
 
-      <section className="category-section">
-        <p className="category-title bold-text">카테고리</p>
-
-        <div className="category-tab-bar">
-          {categoryTabs.map((tab, index) => (
-            <span key={index} className="category-tab-item">
-              {tab}
-            </span>
-          ))}
-        </div>
-
-        {categories.map((cat, idx) => (
-          <div className="category-group" key={idx}>
-            <p className="group-title">{cat.title}</p>
-            {cat.items.map((item, iidx) => (
-              <React.Fragment key={iidx}>
-                <div className="category-item">
-                  <p className="item-label">{item.label}</p>
-                  <p className="item-detail">{item.detail}</p>
-                </div>
-                {iidx !== cat.items.length - 1 && <div className="item-divider" />}
-              </React.Fragment>
+          <section className="category-section">
+            <p className="category-title bold-text">카테고리</p>
+            <div className="category-tab-bar">
+              {categoryTabs.map((tab, index) => (
+                <span key={index} className="category-tab-item">{tab}</span>
+              ))}
+            </div>
+            {categories.map((cat, idx) => (
+              <div className="category-group" key={idx}>
+                <p className="group-title">{cat.title}</p>
+                {cat.items.map((item, iidx) => (
+                  <React.Fragment key={iidx}>
+                    <div className="category-item">
+                      <p className="item-label">{item.label}</p>
+                      <p className="item-detail">{item.detail}</p>
+                    </div>
+                    {iidx !== cat.items.length - 1 && <div className="item-divider" />}
+                  </React.Fragment>
+                ))}
+              </div>
             ))}
-          </div>
-        ))}
-      </section>
+          </section>
+        </>
+      )}
+
+      {showAIResults && (
+        <section className="ai-recommend-section">
+          <p className="ai-recommend-title">
+            <span className="ai-icon">⚖️</span>
+            <strong className="blue">AI추천</strong> 전문가<br />
+            <span className="desc">상담하신 <strong className="blue">노동법</strong> 키워드를 기반으로 전문가를 추천해드려요.</span>
+          </p>
+
+          {[1, 2, 3].map((_, i) => (
+            <div className="search-result-card" key={i}>
+              <img src={sampleProfile} alt="lawyer" className="lawyer-img" />
+              <div className="lawyer-info">
+                <div className="lawyer-name">홍길동 변호사 <span className="lawfirm">바른길 법무법인</span></div>
+                <div className="lawyer-desc">노동법 전문 10년차, 직접변론</div>
+                <div className="lawyer-tags">
+                  <span className="tag">노동법</span>
+                  <span className="tag">이혼</span>
+                  <span className="tag">소송</span>
+                </div>
+              </div>
+              <div className="arrow">&gt;</div>
+            </div>
+          ))}
+
+          <p className="search-title">검색결과</p>
+          {[1, 2, 3].map((_, i) => (
+            <div className="search-result-card" key={i}>
+                <div className="ai-badge">AI 추천</div>
+              <img src={sampleProfile} alt="lawyer" className="lawyer-img" />
+              <div className="lawyer-info">
+                <div className="lawyer-name">홍길동 변호사 <span className="lawfirm">바른길 법무법인</span></div>
+                <div className="rating">⭐ 5.0 <span className="count">(3)</span></div>
+                <div className="lawyer-desc">노동법 전문 10년차, 직접변론</div>
+                <div className="lawyer-tags">
+                  <span className="tag">노동법</span>
+                  <span className="tag">이혼</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
 
       <BottomNav />
     </div>
