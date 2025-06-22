@@ -1,5 +1,6 @@
 // src/pages/SearchPage.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import BottomNav from '../components/BottomNav';
 import './SearchPage.css';
 import sampleProfile from '../assets/profile.png';
@@ -87,6 +88,7 @@ const categories = [
 ];
 
 function SearchPage() {
+    const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleChange = (e) => {
@@ -144,11 +146,19 @@ function SearchPage() {
           <p className="ai-recommend-title">
             <span className="ai-icon">⚖️</span>
             <strong className="blue">AI추천</strong> 전문가<br />
-            <span className="desc">상담하신 <strong className="blue">노동법</strong> 키워드를 기반으로 전문가를 추천해드려요.</span>
+            <span className="desc">
+              상담하신 <strong className="blue">노동법</strong> 키워드를 기반으로 전문가를 추천해드려요.
+            </span>
           </p>
 
+          {/* ✅ AI 추천 카드 */}
           {[1, 2, 3].map((_, i) => (
-            <div className="search-result-card" key={i}>
+            <div
+                className="search-result-card"
+                key={i}
+                onClick={() => navigate('/lawyer')}
+                style={{ cursor: 'pointer' }}
+                >
               <img src={sampleProfile} alt="lawyer" className="lawyer-img" />
               <div className="lawyer-info">
                 <div className="lawyer-name">홍길동 변호사 <span className="lawfirm">바른길 법무법인</span></div>
@@ -164,9 +174,16 @@ function SearchPage() {
           ))}
 
           <p className="search-title">검색결과</p>
+
+          {/* ✅ 검색 결과 카드 */}
           {[1, 2, 3].map((_, i) => (
-            <div className="search-result-card" key={i}>
-                <div className="ai-badge">AI 추천</div>
+            <div
+              className="search-result-card"
+              key={i}
+              onClick={() => navigate('/lawyer')}
+              style={{ cursor: 'pointer' }}
+            >
+              <div className="ai-badge">AI 추천</div>
               <img src={sampleProfile} alt="lawyer" className="lawyer-img" />
               <div className="lawyer-info">
                 <div className="lawyer-name">홍길동 변호사 <span className="lawfirm">바른길 법무법인</span></div>

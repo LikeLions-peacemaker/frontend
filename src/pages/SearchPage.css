@@ -199,6 +199,7 @@
 }
 
 .search-result-card {
+  /* border: 1px solid red; */
   display: flex;
   align-items: flex-start;
   gap: 12px;

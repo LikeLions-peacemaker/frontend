@@ -1,0 +1,212 @@
+.lawyer-detail-page {
+  padding: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #fff;
+}
+
+.lawyer-header {
+  text-align: center;
+}
+
+.lawyer-photo {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.lawyer-name-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.lawfirm-name {
+  color: #999;
+  margin-bottom: 16px;
+}
+
+.lawyer-summary {
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.lawyer-quote {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.lawyer-background {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.lawyer-specialties {
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.specialty-tags .tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 6px 12px;
+  margin: 4px;
+  font-size: 13px;
+}
+
+.consult-btns {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.btn-inquiry,
+.btn-consult {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-inquiry {
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.btn-consult {
+  background-color: #1a237e;
+  color: white;
+  border: none;
+}
+
+.lawyer-cards-section {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.card {
+  flex: 0 0 auto;
+  background-color: #f5f5f5;
+  padding: 16px;
+  border-radius: 12px;
+  min-width: 180px;
+}
+
+.review-section {
+  margin: 20px 0;
+}
+
+.review {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.lawyer-cards-section {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  overflow-x: auto;
+}
+
+.card {
+  flex-shrink: 0;
+  background-color: #f5f5f5;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.review-section {
+  margin-top: 20px;
+}
+
+.review-section .section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.review-section .rating {
+  font-size: 16px;
+  color: #f8b84e;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.review {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.4;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.case-section {
+  margin: 32px 16px 0;
+}
+
+.case-list {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.case-card {
+  flex: 0 0 auto;
+  width: 260px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.case-title {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.case-title::before {
+  content: '✒️';
+  margin-right: 8px;
+}
+
+.case-desc {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.case-verified {
+  font-size: 13px;
+  color: #1a32d3;
+  font-weight: bold;
+}
