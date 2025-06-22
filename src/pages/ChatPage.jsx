@@ -1,10 +1,10 @@
-import Header from '../components/Header.jsx';
+import ChatHeader from '../components/ChatHeader.jsx';
 import Chat from '../components/Chat.jsx';
 
 function ChatPage() {
     return(
         <div>
-            <Header />
+            <ChatHeader />
             <Chat />
         </div>
     );
