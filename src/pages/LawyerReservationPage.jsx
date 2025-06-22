@@ -3,8 +3,14 @@ import './LawyerReservationPage.css';
 import sampleProfile from '../assets/profile.png';
 import { ReactComponent as LawIcon } from '../assets/law_icon.svg';
 import { ReactComponent as CheckIcon } from '../assets/check-icon.svg';
+import { useNavigate } from 'react-router-dom';
 
 function LawyerReservationPage() {
+  const navigate = useNavigate();
+
+  const handleGoClick = () => {
+    navigate('/messages');
+  };
   return (
     <div className="reservation-page">
       <header className="reservation-header">상담 예약하기</header>
@@ -79,7 +85,7 @@ function LawyerReservationPage() {
     <div className="share-title-wrapper">
       <p className="title">상담내역 공유하기</p>
       <div className="share-action">
-        <button className="go-btn">바로가기</button>
+        <button className="go-btn" onClick={handleGoClick}>바로가기</button>
         {/* <span className="arrow">▶</span> */}
       </div>
     </div>
