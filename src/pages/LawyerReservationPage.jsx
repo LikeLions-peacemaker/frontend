@@ -26,25 +26,28 @@ function LawyerReservationPage() {
         </div>
       </section>
 
-      <section className="calendar-section">
+            <section className="calendar-section">
         <p className="title">날짜 선택</p>
         <div className="calendar">
-          <div className="calendar-header">
-            <span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span><span>일</span>
-          </div>
-          <div className="calendar-days">
-            <span className="day">23</span>
-            <span className="day">24</span>
-            <span className="day">25</span>
-            <span className="day">26</span>
-            <span className="day">27</span>
-            <span className="day">28</span>
-            <span className="day">29</span>
-            <span className="day">30</span>
-            <span className="day today">오늘</span>
-          </div>
+            <div className="calendar-grid">
+            <div className="day-label">월</div>
+            <div className="day-label">화</div>
+            <div className="day-label">수</div>
+            <div className="day-label">목</div>
+            <div className="day-label">금</div>
+            <div className="day-label">토</div>
+            <div className="day-label">일</div>
+
+            <div className="date">23</div>
+            <div className="date">24</div>
+            <div className="date">25</div>
+            <div className="date">26</div>
+            <div className="date">27</div>
+            <div className="date">28</div>
+            <div className="date today">오늘</div>
+            </div>
         </div>
-      </section>
+        </section>
 
       <section className="time-section">
         <p className="title">시간 선택</p>

@@ -1,0 +1,99 @@
+.message-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+}
+
+.back-btn {
+  margin-right: 12px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px 100px 16px;
+}
+
+.message-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.message-card .icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+}
+
+.message-content {
+  flex: 1;
+}
+
+.message-content .bold {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.message-content .gray {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.message-content .date {
+  font-size: 12px;
+  color: #999;
+}
+
+.check {
+  flex-shrink: 0;
+  margin-left: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.message-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 -1px 6px rgba(0,0,0,0.05);
+}
+
+.send-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #1d2088;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
