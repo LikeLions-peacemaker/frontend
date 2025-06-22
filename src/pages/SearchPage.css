@@ -1,0 +1,122 @@
+/* 전체 페이지 패딩 및 폰트 */
+.search-page {
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 16px;
+  background-color: #fff;
+}
+
+/* 검색창 */
+.search-header {
+  margin-bottom: 24px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+}
+
+/* 최근 검색어 제목 + 내용 */
+.recent-section {
+  margin-bottom: 30px;
+}
+
+.bold-text {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.recent-empty {
+  font-size: 14px;
+  color: #888;
+}
+
+/* 카테고리 제목 */
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* 가로 스크롤 탭 */
+.category-tab-bar {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 4px 0 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.category-tab-item {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  flex-shrink: 0;
+}
+
+/* 본문 카테고리 묶음 */
+.category-group {
+  margin-top: 24px;
+}
+
+.group-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 12px 0; 
+}
+
+.category-item {
+  margin-bottom: 12px; /* 기존에 16px 이상이었다면 줄여줘 */
+}
+
+.item-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px; /* label과 detail 간 간격도 줄임 */
+}
+
+.item-detail {
+  font-size: 13px;
+  color: #666;
+  margin: 0; /* 혹시라도 브라우저 기본 여백 제거 */
+}
+
+.detail-chip {
+  font-size: 13px;
+  color: #777;
+  padding-right: 8px;
+  position: relative;
+}
+
+/* .detail-chip::after {
+  content: '|';
+  margin-left: 8px;
+  color: #ccc;
+}
+
+.detail-chip:last-child::after {
+  content: '';
+} */
+
+.item-divider {
+  text-align: center;
+  color: #ccc;
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.item-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 12px 0;
+}

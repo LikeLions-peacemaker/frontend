@@ -66,23 +66,23 @@ function BottomNav() {
   ];
 
   return (
-    <nav className="bottom-nav">
-      {menuItems.map((item) => (
-        <div
-          key={item.id}
-          className={`nav-item ${activeTab === item.id ? 'active' : ''}`}
-          onClick={() => handleNavigation(item.path, item.id)}
-        >
-          <img
-            src={activeTab === item.id ? item.iconOn : item.iconOff}
-            alt={item.label}
-            className="nav-icon"
-          />
-          
-        </div>
-      ))}
-    </nav>
-  );
+  <nav className="bottom-nav">
+    {menuItems.map((item) => (
+      <div
+        key={item.id}
+        className={`nav-item ${activeTab === item.id ? 'active' : ''}`}
+        onClick={() => handleNavigation(item.path, item.id)}
+      >
+        <img
+          src={activeTab === item.id ? item.iconOn : item.iconOff}
+          alt={item.label}
+          className="nav-icon"
+        />
+        {/* <span className="nav-label">{item.label}</span> */} {/* ❌ 이 줄 주석 또는 삭제 */}
+      </div>
+    ))}
+  </nav>
+);
 }
 
 export default BottomNav;
