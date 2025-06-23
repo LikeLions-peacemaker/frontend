@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ChatPage from './pages/ChatPage';
@@ -13,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<HomePage />} />
           <Route path="/chat" element={<ChatPage />} />
+          <Route path="/chat/:sessionId" element={<ChatPage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/mypage" element={<MyPage />} />
         </Routes>
