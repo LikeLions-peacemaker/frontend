@@ -1,4 +1,4 @@
-import React from 'react';
+import sendButton from "../assets/sendButton.svg";
 import './RecommendedQuestions.css';
 
 function RecommendedQuestions() {
@@ -17,6 +17,12 @@ function RecommendedQuestions() {
         ))}
       </div>
       <input className="question-input" placeholder="로우헬퍼에게 무엇이든 물어보세요!" />
+      <button
+        className="chat-send-button"
+        type="submit"
+      >
+        <img src={sendButton} alt="전송" />
+      </button>
     </section>
   );
 }
